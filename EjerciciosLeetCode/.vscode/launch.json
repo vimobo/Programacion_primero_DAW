@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Test",
+            "request": "launch",
+            "mainClass": "Test",
+            "projectName": "EjerciciosLeetCode_cac4e9f"
+        },
+        {
+            "type": "java",
+            "name": "Debug Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "cwd": "${workspaceFolder}/palindrome.number",
+            "console": "integratedTerminal"
+        }
+    ]
+}
