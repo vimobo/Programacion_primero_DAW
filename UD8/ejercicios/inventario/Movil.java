@@ -1,7 +1,10 @@
 public class Movil extends Dispositivo {
-    private String cpu;
-    private String ram;
-    private String drive;
-    private String drive;
-    private String motherboard;
+   private int tamBateria;
+   private String senyal;
+
+   public Movil(String nombre, String marca, double precio, int stock, int tamBateria, String senyal) {
+        super(nombre, marca, precio, stock);
+        this.senyal = senyal;
+        this.tamBateria = tamBateria;   
+   }
 }
