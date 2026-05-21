@@ -1,0 +1,29 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Map<Integer, String> personas = new HashMap<>();
+
+        personas.put(1, "Ana");
+        personas.put(2, "Luis");
+        personas.put(3, "Carlos");
+
+        Iterator<Map.Entry<Integer, String>> it =
+                personas.entrySet().iterator();
+
+        while (it.hasNext()) {
+
+            Map.Entry<Integer, String> entry = it.next();
+
+            if (entry.getValue().equals("Luis")) {
+                it.remove();
+            }
+        }
+
+        System.out.println(personas);
+    }
+}
