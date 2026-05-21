@@ -1,4 +1,3 @@
-package UD8.ejercicios.carrito;
 
 public class ProductoCantidad {
     private Producto producto;
@@ -30,5 +29,11 @@ public class ProductoCantidad {
         else if (((ProductoCantidad)obj).getProducto().equals(this.producto) && this.cantidad == ((ProductoCantidad)obj).getCantidad())
             isEqual = true;
         return isEqual;
+    }
+
+    @Override
+    public String  toString(){
+        return "\n**************************" + this.producto.toString() +
+         "\nCantidad: " +  this.cantidad ;
     }
 }

@@ -1,4 +1,3 @@
-package UD8.ejercicios.carrito;
 
 public class Producto {
 
@@ -43,5 +42,10 @@ public class Producto {
             this.getStock() == p.getStock())
             equals = true;
         return equals;
+    }
+
+    @Override
+    public String toString() {
+        return  "\nid: "+  id + "\nnombre: "+  nombre + "\nprecio: " + precio + "\nstock: " +  stock;
     }
 }
