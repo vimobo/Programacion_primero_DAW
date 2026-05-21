@@ -15,8 +15,10 @@ public class Inventario {
 
     public void actualizarStock(String key, int stockASumar) {
         int stock = (this.inventario.get(key)).getStock();
-        if (stock + stockASumar >= 0) {
-           this.inventario.get(key).setStock(stock + stockASumar); 
+        if (this.inventario.containsKey(key)) {
+            if (stock + stockASumar >= 0) {
+                this.inventario.get(key).setStock(stock + stockASumar); 
+            }
         }
     }
 
