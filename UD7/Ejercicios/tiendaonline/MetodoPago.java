@@ -1,3 +1,3 @@
-public interface MetodoPago{
+public interface MetodoPago {
     public void pagar(double cantidad);
 }

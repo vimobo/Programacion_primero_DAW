@@ -1,36 +1,36 @@
 package ecocity;
 
-public class BiciElectrica extends Vehiculo{
+public class BiciElectrica extends Vehiculo {
 
-	//att
+	// att
 	private boolean incluyeCasco;
-	
-	//constructor
+
+	// constructor
 	public BiciElectrica(int idVehiculo, String marca, double tarifaBaseDiaria, boolean incluyeCasco) {
 		super(idVehiculo, marca, tarifaBaseDiaria);
 		this.incluyeCasco = incluyeCasco;
 	}
-	
-	//métodos
+
+	// métodos
 	@Override
-	public String toString(){
+	public String toString() {
 		String cad = super.toString() +
-					"\nCasco Incluido: ";
+				"\nCasco Incluido: ";
 		if (incluyeCasco)
 			cad += "si";
 		else
 			cad += "no";
 		return cad;
 	}
-	
-	//calculamos el alquiler
+
+	// calculamos el alquiler
 	@Override
 	public double calcularCosteAlquiler(int dias) {
 		final int COSTE_DIARIO_CASCO = 2;
-		
+
 		if (incluyeCasco)
 			tarifaBaseDiaria += COSTE_DIARIO_CASCO;
-		
+
 		return dias * tarifaBaseDiaria;
 	}
 }

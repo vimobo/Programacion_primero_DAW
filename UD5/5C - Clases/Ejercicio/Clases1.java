@@ -24,46 +24,49 @@ import java.util.Scanner;
 
 public class Cuenta {
 
-
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         int cantidad = 0;
 
-        Cuenta cuenta1 = new Cuenta(1,1000);
-        Cuenta cuenta2 = new Cuenta(2,2000);
+        Cuenta cuenta1 = new Cuenta(1, 1000);
+        Cuenta cuenta2 = new Cuenta(2, 2000);
     }
-    
-        private int saldo;
-        private int id;
-        
-        public Cuenta (int id, int saldo) {
-            this.id = id;
-            this.saldo = saldo;
-        }
-        public void ingresar (int cantidad) {   
-            System.out.println("Saldo anterior: " + saldo);
-            saldo += cantidad;
-            System.out.println("Saldo nuevo: "+ saldo);
-        }
-        
-        public void retirar(int cantidad) {
-            System.out.println("Saldo anterior: " + saldo);
-            saldo -= cantidad;
-            System.out.println("Saldo nuevo: "+ saldo);
-        }
-        public int getSaldo () {
-            return saldo;
-        }
-        public String toString() {
-            System.out.println("cuenta " + id + " saldo " + saldo );
-        }
-        public void transferencia (Cuenta cuenta, int cantidad) {
-            System.out.println("Saldo anterior: " + saldo);
-            saldo -= cantidad;
-            System.out.println("Saldo nuevo: "+ saldo);
-            System.out.println("Saldo anterior: " + cuenta.saldo);
-            cuenta.saldo += cantidad;
-            System.out.println("Saldo nuevo: "+ cuenta.saldo);
-            
+
+    private int saldo;
+    private int id;
+
+    public Cuenta(int id, int saldo) {
+        this.id = id;
+        this.saldo = saldo;
+    }
+
+    public void ingresar(int cantidad) {
+        System.out.println("Saldo anterior: " + saldo);
+        saldo += cantidad;
+        System.out.println("Saldo nuevo: " + saldo);
+    }
+
+    public void retirar(int cantidad) {
+        System.out.println("Saldo anterior: " + saldo);
+        saldo -= cantidad;
+        System.out.println("Saldo nuevo: " + saldo);
+    }
+
+    public int getSaldo() {
+        return saldo;
+    }
+
+    public String toString() {
+        System.out.println("cuenta " + id + " saldo " + saldo);
+    }
+
+    public void transferencia(Cuenta cuenta, int cantidad) {
+        System.out.println("Saldo anterior: " + saldo);
+        saldo -= cantidad;
+        System.out.println("Saldo nuevo: " + saldo);
+        System.out.println("Saldo anterior: " + cuenta.saldo);
+        cuenta.saldo += cantidad;
+        System.out.println("Saldo nuevo: " + cuenta.saldo);
+
     }
 }

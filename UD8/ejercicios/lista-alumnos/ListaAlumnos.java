@@ -11,14 +11,14 @@ este ejercicio deberás hacer uso de ArrayList o LinkedList */
 
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
-
+import java.util.Collections;
 
 public class ListaAlumnos {
 
     ArrayList<Alumno> listaAlumno;
 
-    public ListaAlumnos(){
-       listaAlumno = new ArrayList<>();
+    public ListaAlumnos() {
+        listaAlumno = new ArrayList<>();
     }
 
     public void agregarAlumno(Alumno a) {
@@ -27,7 +27,7 @@ public class ListaAlumnos {
 
     public void mostrarAlumnos() {
 
-        for(Alumno a: listaAlumno){
+        for (Alumno a : listaAlumno) {
             System.out.println(a.devolverContenidoString());
             System.out.println();
         }
@@ -36,35 +36,41 @@ public class ListaAlumnos {
     public Alumno buscarAlumno(String nombre) {
         Alumno al = null;
 
-        for(Alumno a: listaAlumno) {
+        for (Alumno a : listaAlumno) {
             if (a.getNombre().equals(nombre)) {
                 al = a;
             }
         }
         return al;
     }
-    
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
-        Alumno a1 = new Alumno("Vicenç", "Moratinos", new GregorianCalendar(2000, 04,21), "Primero DAW");
-        Alumno a2 = new Alumno("Maiker", "Vanicio", new GregorianCalendar(2008, 02,02), "Primero DAW");
-        Alumno a3 = new Alumno("Vicki", "Sánchez", new GregorianCalendar(2004, 07,14), "Primero DAW");
+        Alumno a1 = new Alumno("1icenç", "Moratinos", new GregorianCalendar(2000, 04, 21), "Primero DAW");
+        Alumno a2 = new Alumno("2aiker", "Vanicio", new GregorianCalendar(2008, 02, 02), "Primero DAW");
+        Alumno a3 = new Alumno("3vicki", "Anchez", new GregorianCalendar(2004, 07, 14), "Primero DAW");
+        Alumno a4 = new Alumno("3vicki", "Bómez", new GregorianCalendar(2005, 11, 30), "Primero DAW");
 
-        ListaAlumnos li = new ListaAlumnos(); 
+        ListaAlumnos li = new ListaAlumnos();
 
-        //añadimos los alumnos
+        // añadimos los alumnos
         li.agregarAlumno(a1);
         li.agregarAlumno(a2);
         li.agregarAlumno(a3);
+        li.agregarAlumno(a4);
 
-        //mostrar
+        // mostrar
         li.mostrarAlumnos();
 
-        //buscar
-        System.out.println(li.buscarAlumno("Maiker").devolverContenidoString());
-        System.out.println(li.listaAlumno.indexOf(li.buscarAlumno("Maiker")) + " position");
+        // ordenar
+        li.listaAlumno.sort(null);
+        System.out.println("Lista ordenada por nombre y apellidos:");
+        li.mostrarAlumnos();
+
+        // buscar
+        System.out.println(li.buscarAlumno("2aiker").devolverContenidoString());
+        System.out.println(li.listaAlumno.indexOf(li.buscarAlumno("2aiker")) + " position");
         System.out.println();
-        
-    }    
+
+    }
 }

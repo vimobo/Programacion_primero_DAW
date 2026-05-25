@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Ampliacion12 {
 
-    public static void main (String[]args){
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int numeroIntroducido = 0;
@@ -18,31 +18,26 @@ public class Ampliacion12 {
                 repetirBucle = false;
             }
 
-            catch(Exception e)
-            {
+            catch (Exception e) {
                 System.out.println("Hay una excepcion");
                 repetirBucle = true;
             }
 
-        }
-        while (repetirBucle);
+        } while (repetirBucle);
 
         numeroIntroducido = Math.abs(numeroIntroducido);
 
-        for (i = 10 ; division > 10; i*= 10  )
-        {
-        division = numeroIntroducido / i;
-        contador++;
+        for (i = 10; division > 10; i *= 10) {
+            division = numeroIntroducido / i;
+            contador++;
         }
 
-        if (numeroIntroducido < 10)
-        {
+        if (numeroIntroducido < 10) {
             System.out.println("El numero " + numeroIntroducido + " tiene 1 cifra");
         }
 
-        else
-        {
-            System.out.println("El numero " + numeroIntroducido + " tiene " +contador + " cifras");
-        }  
+        else {
+            System.out.println("El numero " + numeroIntroducido + " tiene " + contador + " cifras");
+        }
     }
 }

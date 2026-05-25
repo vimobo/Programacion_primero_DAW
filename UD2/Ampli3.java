@@ -4,13 +4,13 @@ public class Ampli3 {
 
     static final int MAYOR = 18;
 
-    public static void main (String[]args){
+    public static void main(String[] args) {
 
-        Scanner sc =  new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         char letra;
-        String palabra , combo;
+        String palabra, combo;
         int edad;
-        
+
         System.out.println("numero");
         edad = Integer.parseInt(sc.nextLine());
         System.out.println("letra");
@@ -19,6 +19,6 @@ public class Ampli3 {
         palabra = sc.nextLine();
         combo = palabra + letra;
         System.out.println(combo + edad);
-        System.out.println((edad >= MAYOR)? "hehe" : "hoho");
+        System.out.println((edad >= MAYOR) ? "hehe" : "hoho");
     }
 }

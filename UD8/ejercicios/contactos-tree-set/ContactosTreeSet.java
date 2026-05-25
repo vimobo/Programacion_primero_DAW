@@ -1,3 +1,4 @@
+
 /**Estás desarrollando una aplicación para gestionar contactos, y debes asegurarte de que no existan 
 contactos duplicados y que estos aparecen en orden alfabético. Crea un programa en Java que haga 
 uso   de   un  TreeSet  para   almacenar   objetos   de   la   clase  Contacto,   que   deberéis   implementar 
@@ -8,7 +9,7 @@ clases. */
 import java.util.TreeSet;
 
 public class ContactosTreeSet {
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         TreeSet<Contacto> agenda = new TreeSet<>();
 
@@ -20,7 +21,7 @@ public class ContactosTreeSet {
         agenda.add(c2);
         agenda.add(c3);
 
-        for(Contacto c: agenda) {
+        for (Contacto c : agenda) {
             System.out.println(c);
         }
     }

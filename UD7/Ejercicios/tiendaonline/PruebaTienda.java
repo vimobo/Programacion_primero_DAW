@@ -182,12 +182,12 @@ la versión aún más avanzada (nivel proyecto final DAW)
 o un proyecto aún más difícil tipo videojuego RPG en Java (muy bueno para practicar POO).*/
 
 public class PruebaTienda {
-    public static void main (String[]args) {
+    public static void main(String[] args) {
         Usuario u1 = new Usuario("Vi", "vi@gmail.com");
-        //System.out.println(u1);
+        // System.out.println(u1);
 
-        ProductoFisico p1 = new ProductoFisico( 1.2, 0.2, "Caracol", 2.99);
-        //System.out.println(p1);
+        ProductoFisico p1 = new ProductoFisico(1.2, 0.2, "Caracol", 2.99);
+        // System.out.println(p1);
 
         Pedido p = new Pedido();
         PagoTarjeta pt = new PagoTarjeta(1234);

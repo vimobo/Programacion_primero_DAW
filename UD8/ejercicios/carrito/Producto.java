@@ -28,24 +28,25 @@ public class Producto {
     public int getStock() {
         return stock;
     }
+
     public void setStock(int stock) {
         this.stock = stock;
     }
 
     @Override
-    public boolean equals(Object obj){
+    public boolean equals(Object obj) {
         Producto p = (Producto) obj;
         boolean equals = false;
-        if(this.getNombre().equals(p.getNombre()) &&
-           this.getId().equals(p.getId()) &&
-            this.getPrecio() == p.getPrecio() &&
-            this.getStock() == p.getStock())
+        if (this.getNombre().equals(p.getNombre()) &&
+                this.getId().equals(p.getId()) &&
+                this.getPrecio() == p.getPrecio() &&
+                this.getStock() == p.getStock())
             equals = true;
         return equals;
     }
 
     @Override
     public String toString() {
-        return  "\nid: "+  id + "\nnombre: "+  nombre + "\nprecio: " + precio + "\nstock: " +  stock;
+        return "\nid: " + id + "\nnombre: " + nombre + "\nprecio: " + precio + "\nstock: " + stock;
     }
 }

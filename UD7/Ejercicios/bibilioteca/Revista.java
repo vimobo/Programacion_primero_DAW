@@ -1,12 +1,11 @@
 public class Revista extends Publicacion {
 
-    //att
+    // att
     private int nRevista;
 
-
-    //constructor
+    // constructor
     public Revista(int isbn, String titulo, int anioPublicacion, int nRevista) {
-        super(isbn,titulo,anioPublicacion);
+        super(isbn, titulo, anioPublicacion);
         this.nRevista = nRevista;
     }
 }

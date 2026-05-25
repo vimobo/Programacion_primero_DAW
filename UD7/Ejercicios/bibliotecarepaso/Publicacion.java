@@ -1,7 +1,7 @@
 public class Publicacion {
 
-    //att
-    protected String isbn ;
+    // att
+    protected String isbn;
     protected String titulo;
     protected int anioPublicacion;
 
@@ -12,14 +12,14 @@ public class Publicacion {
         this.anioPublicacion = anioPublicacion;
     }
 
-    public boolean estaPrestado(){
+    public boolean estaPrestado() {
         return true;
     }
 
-    public String toString(){
-        return  "\nIsbn: " + isbn +
+    public String toString() {
+        return "\nIsbn: " + isbn +
                 "\nTitulo: " + titulo +
                 "\nAño Publicacion: " + anioPublicacion;
     }
-    
-} 
+
+}

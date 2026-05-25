@@ -16,6 +16,7 @@ public class Ordenador extends Dispositivo {
     }
 
     public String toString() {
-        return super.toString() + "cpu: " + cpu + "\nram: " + ram + "\ndrive: " + drive + "\nmotherboard: " + motherboard;
+        return super.toString() + "cpu: " + cpu + "\nram: " + ram + "\ndrive: " + drive + "\nmotherboard: "
+                + motherboard;
     }
 }

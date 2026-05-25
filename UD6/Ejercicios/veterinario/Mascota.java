@@ -18,19 +18,20 @@ Aquí practicarás la relación entre objetos y la búsqueda por criterios múlt
 
         Método informePacientesMayores(int limiteEdad): Muestra todas las mascotas de la clínica que superen esa edad. */
 
-
 package veterinario;
 
 public class Mascota {
 
-    public enum Especie {GATO, PERRO, AVE}
+    public enum Especie {
+        GATO, PERRO, AVE
+    }
 
     private String nombre;
     private Especie especie;
     private int edad;
     private double peso;
 
-    public Mascota(){
+    public Mascota() {
 
     }
 
@@ -57,7 +58,7 @@ public class Mascota {
         this.especie = especie;
     }
 
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
@@ -65,11 +66,11 @@ public class Mascota {
         return especie;
     }
 
-    public int getEdad(){
+    public int getEdad() {
         return edad;
     }
 
-    public double getPeso(){
+    public double getPeso() {
         return peso;
     }
 

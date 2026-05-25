@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Ampliacion4 {
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         //
         Scanner sc = new Scanner(System.in);
@@ -16,15 +16,14 @@ public class Ampliacion4 {
         System.out.println("Nombre:");
         nombre = sc.nextLine();
         System.out.println("Telefono:");
-        //tlf = sc.nextInt();
+        // tlf = sc.nextInt();
         tlf = Integer.parseInt(sc.nextLine());
         System.out.println("Estatura:");
-        //estatura = sc.nextDouble();
+        // estatura = sc.nextDouble();
         estatura = Double.parseDouble(sc.nextLine());
-        
 
-        System.out.printf("\n Telefono: %d \n Nombre: %s \n Estatura: %.2f \n Genero: %c \n ", tlf, nombre, estatura, genero);
-
+        System.out.printf("\n Telefono: %d \n Nombre: %s \n Estatura: %.2f \n Genero: %c \n ", tlf, nombre, estatura,
+                genero);
 
     }
 }

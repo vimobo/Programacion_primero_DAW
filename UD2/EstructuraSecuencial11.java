@@ -1,8 +1,8 @@
 import java.util.Scanner;
 
 public class EstructuraSecuencial11 {
-	public static void main (String[]args) {
-		//declaramos variables
+	public static void main(String[] args) {
+		// declaramos variables
 		int a;
 		int b;
 		int valorAbsoluto;

@@ -9,33 +9,33 @@ nos permita almacenar esa información, y haz los siguientes pasos:
 import java.util.HashMap;
 
 public class Diccionario {
-    public static void main (String[]args) {
-        HashMap<String,String> diccionario  = new HashMap<>();
-        
-        //añadimos
-        diccionario.put("manzana","apple");
-        diccionario.put("vino","wine");
-        diccionario.put("perro","donaltrum");
-        diccionario.put("pelota","ball");
+    public static void main(String[] args) {
+        HashMap<String, String> diccionario = new HashMap<>();
 
-        //traduccion
+        // añadimos
+        diccionario.put("manzana", "apple");
+        diccionario.put("vino", "wine");
+        diccionario.put("perro", "donaltrum");
+        diccionario.put("pelota", "ball");
+
+        // traduccion
         System.out.println(diccionario.get("manzana"));
 
-        //remove
+        // remove
         diccionario.remove("pelota");
 
-        //vemos todo
+        // vemos todo
         /*
-        for(int i = 0; i < diccionario.size(); i++) {
-            System.out.println(diccionario.get());
-        }*/
+         * for(int i = 0; i < diccionario.size(); i++) {
+         * System.out.println(diccionario.get());
+         * }
+         */
 
-
-        for(String key: diccionario.keySet()) {
-            System.out.println(key + " = " + diccionario.get(key)); 
+        for (String key : diccionario.keySet()) {
+            System.out.println(key + " = " + diccionario.get(key));
         }
 
-        //for ma alternativa que recorre ambos a la vez 
+        // for ma alternativa que recorre ambos a la vez
         for (HashMap.Entry<String, String> entry : diccionario.entrySet()) {
             System.out.println(entry.getKey() + " -> " + entry.getValue());
         }

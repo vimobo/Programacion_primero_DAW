@@ -11,14 +11,13 @@ public class Contacto implements Comparable {
     }
 
     @Override
-    public int compareTo(Object obj){
-        return this.getNombre().compareTo(((Contacto)obj).getNombre());
+    public int compareTo(Object obj) {
+        return this.getNombre().compareTo(((Contacto) obj).getNombre());
     }
 
     public String getNombre() {
         return this.nombre;
     }
-
 
     public int getNumero() {
         return this.numero;
@@ -31,15 +30,15 @@ public class Contacto implements Comparable {
     @Override
     public boolean equals(Object obj) {
         boolean equals = false;
-        if (this.getNombre().equals(((Contacto)obj).getNombre())
-                && this.getNumero() == ((Contacto)obj).getNumero() &&
-                this.getCorreo().equals(((Contacto)obj).getCorreo()))
+        if (this.getNombre().equals(((Contacto) obj).getNombre())
+                && this.getNumero() == ((Contacto) obj).getNumero() &&
+                this.getCorreo().equals(((Contacto) obj).getCorreo()))
             equals = true;
         return equals;
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return this.nombre + "\n" +
                 this.numero + "\n" +
                 this.correo;

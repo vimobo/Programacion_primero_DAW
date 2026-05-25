@@ -23,42 +23,42 @@ correctos.
 import java.util.Scanner;
 
 public class Cuenta {
-    
-        private double saldo;
-        private int id;
-        
-        public Cuenta (int id, double saldo) {
-            this.id = id;
-            this.saldo = saldo;
-        }
 
-        public void setSaldo (double cantidad) {
-            saldo = cantidad;
-        }
+    private double saldo;
+    private int id;
 
-        public void setId (int nuevoId) {
-            id = nuevoId;
-        }
+    public Cuenta(int id, double saldo) {
+        this.id = id;
+        this.saldo = saldo;
+    }
 
-        public void ingresar (double cantidad) {   
-            saldo += cantidad;
-        }
-        
-        public void retirar(double cantidad) {
-            saldo -= cantidad;
-        }
+    public void setSaldo(double cantidad) {
+        saldo = cantidad;
+    }
 
-        public double getSaldo () {
-            return saldo;
-        }
+    public void setId(int nuevoId) {
+        id = nuevoId;
+    }
 
-        public String toString() {
-            String cad = "cuenta " + id + " saldo " + saldo;
-            return cad;
-        }
+    public void ingresar(double cantidad) {
+        saldo += cantidad;
+    }
 
-        public void transferencia (Cuenta cuenta, double cantidad) {
-            saldo -= cantidad;
-            cuenta.saldo += cantidad;
+    public void retirar(double cantidad) {
+        saldo -= cantidad;
+    }
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public String toString() {
+        String cad = "cuenta " + id + " saldo " + saldo;
+        return cad;
+    }
+
+    public void transferencia(Cuenta cuenta, double cantidad) {
+        saldo -= cantidad;
+        cuenta.saldo += cantidad;
     }
 }

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class EstructuraCondicional3 {
 
-    public static void main (String[]args){
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int numero;
@@ -12,6 +12,6 @@ public class EstructuraCondicional3 {
         if ((numero % 2) == 0)
             System.out.println("el numero es par");
         else
-            System.out.println("El numero es impar");            
+            System.out.println("El numero es impar");
     }
 }

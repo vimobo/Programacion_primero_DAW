@@ -1,3 +1,4 @@
+
 /**
  * B) Crea un programa con una bicicleta y un coche. A continuación muestra un menú como el
 siguientes:
@@ -23,7 +24,7 @@ D) En aquellos métodos que pidas valores al usuario, implementa control de exce
 import java.util.Scanner;
 
 public class PruebaVehiculo {
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         String opcion = "";
@@ -31,29 +32,28 @@ public class PruebaVehiculo {
 
         do {
 
-            //menu
+            // menu
             System.out.println("OPCIONES - VEHÍCULOS");
-            System.out.println("\n1. Rodar con bicicleta 10 km" 
-                                + "\n2. Cambiar piñones  Muestra el cambio realizado"
-                                + "\n3. Ver kilometraje de la bicicleta (parcial/total)"
-                                + "\n4. Ver informac +ión completa de la bicicleta"
-                                + "\n5. Rodar con coche 10000 km"
-                                + "\n6. Revisar un coche"
-                                + "\n7. Ver kilometraje del coche (parcial/total)"
-                                + "\n8. Saber lo kilómetros que restan para la revisión del coche"
-                                + "\n9. Ver información completa del coche"
-                                + "\n10. Ver el número de vehículos creados"
-                                + "\n11. Ver kilometraje total de todos los vehículos creados"
-                                + "\n12. Salir");
+            System.out.println("\n1. Rodar con bicicleta 10 km"
+                    + "\n2. Cambiar piñones  Muestra el cambio realizado"
+                    + "\n3. Ver kilometraje de la bicicleta (parcial/total)"
+                    + "\n4. Ver informac +ión completa de la bicicleta"
+                    + "\n5. Rodar con coche 10000 km"
+                    + "\n6. Revisar un coche"
+                    + "\n7. Ver kilometraje del coche (parcial/total)"
+                    + "\n8. Saber lo kilómetros que restan para la revisión del coche"
+                    + "\n9. Ver información completa del coche"
+                    + "\n10. Ver el número de vehículos creados"
+                    + "\n11. Ver kilometraje total de todos los vehículos creados"
+                    + "\n12. Salir");
             System.out.print("\nElige una opción (1-12):");
-            
+
             opcion = sc.nextLine().toLowerCase();
 
-            Coche coche = new Coche(0,0,150);
-            Bicicleta bici = new Bicicleta(0,0,3);
+            Coche coche = new Coche(0, 0, 150);
+            Bicicleta bici = new Bicicleta(0, 0, 3);
 
-            switch (opcion){
-
+            switch (opcion) {
 
                 case "1":
                     bici.recorrer(10);

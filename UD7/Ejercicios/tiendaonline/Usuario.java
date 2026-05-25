@@ -1,13 +1,13 @@
 public class Usuario {
 
-    //atributos
+    // atributos
     private static int cuentaId;
     protected int id;
-    protected String nombre;      
+    protected String nombre;
     protected String email;
-    
-    //constructor
-    public Usuario (String nombre, String email) {
+
+    // constructor
+    public Usuario(String nombre, String email) {
         id = cuentaId;
         cuentaId++;
         this.nombre = nombre;
@@ -15,7 +15,6 @@ public class Usuario {
     }
 
     public String toString() {
-        return String.format("------------------\nId: %s\nNombre: %s\nEmail: %s",id, nombre, email);
+        return String.format("------------------\nId: %s\nNombre: %s\nEmail: %s", id, nombre, email);
     }
 }
-

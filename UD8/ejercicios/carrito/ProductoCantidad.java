@@ -15,25 +15,27 @@ public class ProductoCantidad {
     public int getCantidad() {
         return cantidad;
     }
+
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
 
     @Override
-    public boolean equals(Object obj){
+    public boolean equals(Object obj) {
         boolean isEqual = false;
-        if (this == obj) 
+        if (this == obj)
             isEqual = true;
-        else if(!obj.equals(null))
+        else if (!obj.equals(null))
             isEqual = false;
-        else if (((ProductoCantidad)obj).getProducto().equals(this.producto) && this.cantidad == ((ProductoCantidad)obj).getCantidad())
+        else if (((ProductoCantidad) obj).getProducto().equals(this.producto)
+                && this.cantidad == ((ProductoCantidad) obj).getCantidad())
             isEqual = true;
         return isEqual;
     }
 
     @Override
-    public String  toString(){
+    public String toString() {
         return "\n**************************" + this.producto.toString() +
-         "\nCantidad: " +  this.cantidad ;
+                "\nCantidad: " + this.cantidad;
     }
 }

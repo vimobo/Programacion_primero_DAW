@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class PruebaBibliotecaArrays {
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         int opcion;
         Scanner sc = new Scanner(System.in);
@@ -23,15 +23,15 @@ public class PruebaBibliotecaArrays {
             System.out.println("0 - salir");
 
             opcion = sc.nextInt();
-            
+
             array = PruebaBibliotecaArrays.operacionesConArrays(opcion, array);
 
-        } while (opcion !=0);
+        } while (opcion != 0);
 
-        //System.out.println(array[0]);
+        // System.out.println(array[0]);
     }
 
-    public static int [] operacionesConArrays (int opcion, int [] array) {
+    public static int[] operacionesConArrays(int opcion, int[] array) {
 
         Scanner sc = new Scanner(System.in);
         System.out.println("");
@@ -39,7 +39,7 @@ public class PruebaBibliotecaArrays {
 
         switch (opcion) {
             case 1:
-                array = BibliotecaArrays.generaArrays(10,100,50);
+                array = BibliotecaArrays.generaArrays(10, 100, 50);
                 System.out.println(Arrays.toString(array));
                 break;
             case 2:
@@ -54,22 +54,25 @@ public class PruebaBibliotecaArrays {
             case 5:
                 System.out.println("Introduce un numero para saber si esta en el array: ");
                 numero = sc.nextInt();
-                System.out.println(numero + " se encuentra en el array " + Arrays.toString(array) + " " + BibliotecaArrays.contieneNumero(array,numero));
+                System.out.println(numero + " se encuentra en el array " + Arrays.toString(array) + " "
+                        + BibliotecaArrays.contieneNumero(array, numero));
                 break;
             case 6:
                 System.out.println("Introduce un numero para saber si esta en el array: ");
                 numero = sc.nextInt();
-                System.out.println(numero + " se encuentra en el array " + Arrays.toString(array) + " en la posicion " + BibliotecaArrays.posicionNumero(array,numero));
+                System.out.println(numero + " se encuentra en el array " + Arrays.toString(array) + " en la posicion "
+                        + BibliotecaArrays.posicionNumero(array, numero));
                 break;
             case 7:
                 System.out.println("volteado = " + Arrays.toString(BibliotecaArrays.voltearArray(array)));
                 break;
             case 8:
-                array = BibliotecaArrays.rotarDerecha(array,2);
-                System.out.println("Rotado a la derecha = "+ Arrays.toString(array));
+                array = BibliotecaArrays.rotarDerecha(array, 2);
+                System.out.println("Rotado a la derecha = " + Arrays.toString(array));
                 break;
             case 9:
-                System.out.println("Rotado a la izquierda = "+ Arrays.toString(BibliotecaArrays.rotarIzquierda(array, 2)));
+                System.out.println(
+                        "Rotado a la izquierda = " + Arrays.toString(BibliotecaArrays.rotarIzquierda(array, 2)));
                 break;
             default:
                 System.out.println("Chaoo");

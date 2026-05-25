@@ -10,7 +10,7 @@ public class Revista extends Publicacion {
 
     @Override
     public String toString() {
-        return super.toString() + 
+        return super.toString() +
                 "\nNumero Revista: " + nRevista;
     }
 }

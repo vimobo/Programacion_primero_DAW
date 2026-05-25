@@ -24,26 +24,27 @@ mostrarán ambas cartas con el método mostrarCarta() y se compararán con el m�
 comparar. Después de esto se modificará la segunda con los métodos set y se volverán a
 mostrar y comparar.*/
 package carta;
+
 import java.util.Scanner;
 
 public class Carta {
 
-    //att de la clase
+    // att de la clase
     private char palo;
     private int numero;
     private static Scanner sc = new Scanner(System.in);
 
-    //constructores
-    public Carta(){
+    // constructores
+    public Carta() {
 
     }
 
-    public Carta (int numero, char palo) {
+    public Carta(int numero, char palo) {
         this.numero = numero;
         this.palo = palo;
     }
 
-    //numero de la carta con regex
+    // numero de la carta con regex
     public void setNumero() {
         String entrada;
         String patron = "^([1-9]|1[0-3])$";
@@ -56,13 +57,13 @@ public class Carta {
         } while (!entrada.matches(patron));
         this.numero = Integer.parseInt(entrada);
     }
- 
-    //set palo con regex
-    public void setPalo () {
+
+    // set palo con regex
+    public void setPalo() {
         String palo;
         do {
             System.out.print("Introduce el palo de la carta(C, P, R, T): ");
-            palo = sc.nextLine().toUpperCase(); 
+            palo = sc.nextLine().toUpperCase();
 
             if (!palo.matches("^[CPRT]{1}$"))
                 System.out.println("incorrecto, otra vez");
@@ -71,9 +72,9 @@ public class Carta {
         this.palo = palo.charAt(0);
     }
 
-    //imprime la carta con el nombre completo
-    public String imprimirCarta () {
-       
+    // imprime la carta con el nombre completo
+    public String imprimirCarta() {
+
         String imprimirCarta = "";
 
         switch (this.numero) {
@@ -91,14 +92,14 @@ public class Carta {
                 break;
             default:
                 imprimirCarta += "Numero: " + this.numero;
-                break;  
+                break;
         }
         imprimirCarta += "\n";
         switch (this.palo) {
             case 'C':
                 imprimirCarta += "Palo: Corazones";
                 break;
-            case 'P' :
+            case 'P':
                 imprimirCarta += "Palo: Picas";
                 break;
             case 'R':
@@ -108,11 +109,11 @@ public class Carta {
                 imprimirCarta += "Palo: Treboles";
                 break;
         }
-    
+
         return imprimirCarta;
     }
 
-    //comprueba que carta gana
+    // comprueba que carta gana
     public void comprobarCarta(Carta carta) {
         System.out.print("La carta ");
         System.out.println(this.imprimirCarta());
@@ -127,22 +128,22 @@ public class Carta {
         else if (carta.numero == this.numero) {
             if (carta.palo == this.palo)
                 System.out.println("es igual que ");
-            else if (orden.indexOf(this.palo) < orden.indexOf(carta.palo)) 
+            else if (orden.indexOf(this.palo) < orden.indexOf(carta.palo))
                 System.out.println(" pierde contra ");
-            else if (orden.indexOf(this.palo) > orden.indexOf(carta.palo)) 
+            else if (orden.indexOf(this.palo) > orden.indexOf(carta.palo))
                 System.out.println(" gana a ");
         }
         System.out.println(carta.imprimirCarta());
     }
 
-    //main para comprobar el funcionamento de los metodos
-    public static void main (String[]args) {
-        Carta c1 = new Carta(1,'C');
-        Carta c2 = new Carta(1,'P');
+    // main para comprobar el funcionamento de los metodos
+    public static void main(String[] args) {
+        Carta c1 = new Carta(1, 'C');
+        Carta c2 = new Carta(1, 'P');
         c1.setNumero();
         c1.setPalo();
         System.out.println(c1.imprimirCarta());
 
-        c1.comprobarCarta(c2); 
+        c1.comprobarCarta(c2);
     }
 }

@@ -1,3 +1,4 @@
+
 /**Ejercicio3
 Para resolver este ejercicio crea en una clase StringYArray con los siguientes métodos estáticos.
 Para probar los diferentes métodos, crea otra clase Principal con el método main donde se haga uso
@@ -18,7 +19,7 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         int opcion = 0;
         Scanner sc = new Scanner(System.in);
@@ -26,7 +27,7 @@ public class Main {
         String cad2 = "";
 
         do {
-                
+
             System.out.println("\nmenu:");
             System.out.println("1 - crear cad1 ");
             System.out.println("2 - Crear cad2 ");
@@ -38,7 +39,6 @@ public class Main {
             opcion = Integer.parseInt(sc.nextLine());
 
             switch (opcion) {
-
 
                 case 1:
                     System.out.print("Cad1: ");
@@ -52,7 +52,7 @@ public class Main {
 
                 case 3:
                     System.out.println("cad1 = " + cad1 + " cad2 = " + cad2);
-                    System.out.println(TrabajoCadenas.concatenarCadenas(cad1,cad2));
+                    System.out.println(TrabajoCadenas.concatenarCadenas(cad1, cad2));
                     break;
 
                 case 4:
@@ -61,13 +61,13 @@ public class Main {
                     break;
 
                 case 5:
-                    int [] array = TrabajoCadenas.crearArray(5);
+                    int[] array = TrabajoCadenas.crearArray(5);
                     System.out.println(Arrays.toString(array));
                     System.out.println(TrabajoCadenas.convierteArrayEnString(array));
-                    break;                
+                    break;
 
             }
 
-        } while (opcion!=0);
+        } while (opcion != 0);
     }
 }

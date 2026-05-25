@@ -5,13 +5,13 @@ public abstract class Dispositivo {
     private double precio;
     private int stock;
 
-    public Dispositivo (String nombre, String marca, double precio, int stock) {
-        this.nombre = nombre; 
+    public Dispositivo(String nombre, String marca, double precio, int stock) {
+        this.nombre = nombre;
         this.marca = marca;
         this.precio = precio;
         this.stock = stock;
     }
-    
+
     @Override
     public String toString() {
         return "Nombre: " + nombre + "\nMarca: " + marca + "\nPrecio: " + precio + "\nStock: " + stock;

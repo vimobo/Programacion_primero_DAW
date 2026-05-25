@@ -25,19 +25,19 @@ public class Veterinario {
     private String nombre;
     int contadorClientes;
 
-    public Veterinario(String nombre){
+    public Veterinario(String nombre) {
         this.nombre = nombre;
         arrayClientes = new Clientes[20];
     }
 
-    public void anyadirCliente (Clientes c) {
+    public void anyadirCliente(Clientes c) {
         arrayClientes[contadorClientes] = c;
         contadorClientes++;
     }
-    
-    public Mascota buscarMascotaPorNombreVet(String nombre){
-        for(int i = 0; i < contadorClientes; i++) {
-            if (arrayClientes[i] != null) { 
+
+    public Mascota buscarMascotaPorNombreVet(String nombre) {
+        for (int i = 0; i < contadorClientes; i++) {
+            if (arrayClientes[i] != null) {
                 Mascota m = arrayClientes[i].buscarMascotaPorNombre(nombre);
                 if (m != null && m.getNombre() != null) {
                     return m;
@@ -47,8 +47,8 @@ public class Veterinario {
         return null;
     }
 
-    public static void main (String[]args) {
-        
+    public static void main(String[] args) {
+
         Clientes c1 = new Clientes(1234, "Juanjo");
         Clientes c2 = new Clientes(1234, "maiki");
         Mascota m1 = new Mascota("juan", Mascota.Especie.Ave, 21, 10.5);
@@ -66,6 +66,6 @@ public class Veterinario {
         v1.anyadirCliente(c1);
 
         v1.buscarMascotaPorNombreVet("ali").imprimirMascota();
-        
+
     }
 }

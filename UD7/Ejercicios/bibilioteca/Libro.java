@@ -1,18 +1,17 @@
 public class Libro extends Publicacion implements Prestable {
 
-    //att  
+    // att
     private boolean prestado;
 
-
-    //constructor
+    // constructor
     public Libro(int isbn, String titulo, int anioPublicacion) {
-        super(isbn,titulo,anioPublicacion);
+        super(isbn, titulo, anioPublicacion);
         prestado = false;
     }
 
-    //metodo del interfaz prestable
+    // metodo del interfaz prestable
     @Override
-    public void prestar(){
+    public void prestar() {
         prestado = true;
     }
 
@@ -22,7 +21,7 @@ public class Libro extends Publicacion implements Prestable {
     }
 
     @Override
-    public boolean estaPrestado(){
+    public boolean estaPrestado() {
         return prestado;
     }
 }

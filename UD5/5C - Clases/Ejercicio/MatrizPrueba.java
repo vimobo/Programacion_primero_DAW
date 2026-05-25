@@ -2,14 +2,13 @@ import java.util.Scanner;
 
 public class MatrizPrueba {
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         int opcion = 0;
         Scanner sc = new Scanner(System.in);
 
         OperacionesMatrices matriz1 = new OperacionesMatrices();
         OperacionesMatrices matriz2 = new OperacionesMatrices();
-
 
         do {
 
@@ -34,7 +33,7 @@ public class MatrizPrueba {
                     break;
 
                 case 3:
-                    matriz1.productoEscalar(2,1);
+                    matriz1.productoEscalar(2, 1);
                     break;
 
                 case 4:
@@ -52,12 +51,11 @@ public class MatrizPrueba {
                     break;
             }
 
-
         } while (opcion != 0);
 
         matriz1.getMatriz(1);
         matriz2.getMatriz(1);
-        //productoEscalar(matriz1, 4);
+        // productoEscalar(matriz1, 4);
         matriz1.getMatriz(2);
 
     }

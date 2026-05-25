@@ -15,9 +15,8 @@ public class PruebaFiguras {
         }
 
         try {
-            ((Cuadrado)figuras[1]).dibujar();
-        }
-        catch(Exception e) {
+            ((Cuadrado) figuras[1]).dibujar();
+        } catch (Exception e) {
             System.out.println(e);
         }
 

@@ -2,25 +2,20 @@ import java.util.Scanner;
 
 public class Ampliacion1 {
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
         int num = 0;
-        
-        
-        try 
-        {   
+
+        try {
             System.out.println("Introduce un numero");
             num = sc.nextInt();
             esVerdad = true;
-        }
-        catch (Exception e)
-        {
+        } catch (Exception e) {
             System.out.println("Introduce un numero entero cojoneh'");
             esVerdad = false;
         }
-        
 
         switch (num) {
             case 1:

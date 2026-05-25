@@ -1,10 +1,10 @@
-public class Coche  extends Vehiculo{
+public class Coche extends Vehiculo {
 
     private int cilindrada;
     private int kmParciales;
     public static final int KMREVISION = 15000;
 
-    public Coche (int kmParciales, int kmRecorridos, int cilindrada) {    
+    public Coche(int kmParciales, int kmRecorridos, int cilindrada) {
 
         super(kmRecorridos);
         this.cilindrada = cilindrada;
@@ -15,11 +15,11 @@ public class Coche  extends Vehiculo{
         return cilindrada;
     }
 
-    public int getKmParciales () {
+    public int getKmParciales() {
         return kmParciales;
     }
 
-    public void setKmParciales (int kmParciales) {
+    public void setKmParciales(int kmParciales) {
         this.kmParciales = kmParciales;
     }
 
@@ -32,7 +32,7 @@ public class Coche  extends Vehiculo{
     }
 
     public String toString() {
-        return "\n***********" + 
+        return "\n***********" +
                 "|nKm recorridos: " + this.getKmRecorridos() +
                 "\nkm parciales: " + kmParciales +
                 "\ncilindrada: " + cilindrada +

@@ -1,24 +1,24 @@
 public class ProductoFisico extends Producto {
 
-    //atributos
+    // atributos
     private double peso;
     private double costeEnvioXKm;
 
-    //constructor
+    // constructor
     public ProductoFisico(double peso, double costeEnvioXKm, String nombre, double precio) {
         super(nombre, precio);
         this.peso = peso;
         this.costeEnvioXKm = costeEnvioXKm;
     }
 
-    
-    //metodos
+    // metodos
     public double calcularEnvio(int km) {
         return km * costeEnvioXKm;
     }
+
     @Override
     public String toString() {
-        return   "\n" + super.toString() +
+        return "\n" + super.toString() +
                 "\nPeso: " + peso + " kg" +
                 "\nCoste de Envio por Km: " + costeEnvioXKm + " €";
     }

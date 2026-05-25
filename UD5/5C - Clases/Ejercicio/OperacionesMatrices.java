@@ -19,63 +19,62 @@ programa.*/
 
 public class OperacionesMatrices {
 
-    private int [][] matriz1 = new int[4][4];
-    private int [][] matriz2 = new int[4][4];
+    private int[][] matriz1 = new int[4][4];
+    private int[][] matriz2 = new int[4][4];
 
+    public OperacionesMatrices() {
 
-    public OperacionesMatrices () {
-
-        for (int i = 0; i<matriz1.length;i++) {
-            for(int j = 0; j< matriz1[i].length; j++) {
-                matriz1 [i][j] = (int)(Math.random()*(25));
-                matriz2 [i][j] = (int)(Math.random()*(25));
+        for (int i = 0; i < matriz1.length; i++) {
+            for (int j = 0; j < matriz1[i].length; j++) {
+                matriz1[i][j] = (int) (Math.random() * (25));
+                matriz2[i][j] = (int) (Math.random() * (25));
             }
         }
     }
 
-    public void getMatriz (int idMatriz){
+    public void getMatriz(int idMatriz) {
 
         for (int i = 0; i < matriz1.length; i++) {
-            for(int j = 0; j < matriz1[i].length; j++) {
-                if (idMatriz == 1) 
-                    System.out.print(matriz1[i][j]+ "\t");
-                else if (idMatriz == 2) 
-                    System.out.print(matriz2[i][j]+ "\t");
+            for (int j = 0; j < matriz1[i].length; j++) {
+                if (idMatriz == 1)
+                    System.out.print(matriz1[i][j] + "\t");
+                else if (idMatriz == 2)
+                    System.out.print(matriz2[i][j] + "\t");
             }
             System.out.println("");
         }
         System.out.println("");
     }
 
-    public void sumarMatrices () {
-        
+    public void sumarMatrices() {
+
         for (int i = 0; i < matriz1.length; i++) {
-            for(int j = 0; j < matriz1[i].length; j++) {
-                matriz1 [i][j] += matriz2 [i][j];
+            for (int j = 0; j < matriz1[i].length; j++) {
+                matriz1[i][j] += matriz2[i][j];
             }
         }
 
     }
 
-    public void restarMatrices () {
-        
+    public void restarMatrices() {
+
         for (int i = 0; i < matriz1.length; i++) {
-            for(int j = 0; j < matriz1[i].length; j++) {
-                matriz1 [i][j] -= matriz2 [i][j];
+            for (int j = 0; j < matriz1[i].length; j++) {
+                matriz1[i][j] -= matriz2[i][j];
             }
         }
 
     }
 
-    public void productoEscalar (int exponente, int idMatriz) {
+    public void productoEscalar(int exponente, int idMatriz) {
 
         for (int i = 0; i < matriz1.length; i++) {
-            for(int j = 0; j < matriz1[i].length; j++) {
-                if (idMatriz == 1) 
-                    matriz1 [i][j] *= exponente;
-                    
-                else if (idMatriz == 2) 
-                    matriz2 [i][j] *= exponente;
+            for (int j = 0; j < matriz1[i].length; j++) {
+                if (idMatriz == 1)
+                    matriz1[i][j] *= exponente;
+
+                else if (idMatriz == 2)
+                    matriz2[i][j] *= exponente;
             }
         }
     }

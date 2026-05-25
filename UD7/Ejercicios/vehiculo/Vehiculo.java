@@ -9,27 +9,27 @@ public class Vehiculo {
         vehiculosCreados++;
     }
 
-    public static int getKmTotales () {
+    public static int getKmTotales() {
         return kmTotales;
     }
 
-    public void setKmTotales (int kmTotales) {
+    public void setKmTotales(int kmTotales) {
         Vehiculo.kmTotales = kmTotales;
     }
 
-    public int getKmRecorridos () {
+    public int getKmRecorridos() {
         return kmRecorridos;
     }
 
-    public void setKmRecorridos (int kmRecorridos) {
+    public void setKmRecorridos(int kmRecorridos) {
         this.kmRecorridos = kmRecorridos;
     }
 
-    public static int getVehiculosCreados () {
+    public static int getVehiculosCreados() {
         return Vehiculo.vehiculosCreados;
     }
 
-    public void recorrer (int distancia) {
+    public void recorrer(int distancia) {
         kmRecorridos += distancia;
         Vehiculo.kmTotales += distancia;
     }

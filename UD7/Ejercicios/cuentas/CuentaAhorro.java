@@ -17,7 +17,6 @@ public class CuentaAhorro extends Cuenta {
     public void setTipoInteres(double cantidad) {
         this.tipoInteres = cantidad;
     }
- 
 
     public double getTipoInteres() {
         return this.tipoInteres;
@@ -27,19 +26,18 @@ public class CuentaAhorro extends Cuenta {
     public boolean aplicarComisiones() {
         boolean seHaRealizado = false;
 
-        
         if (this.getCuotaMantenimiento() != -1 && this.tipoInteres != -1) {
             this.retirar(this.getCuotaMantenimiento());
-            this.ingresar((this.getSaldo() * this.tipoInteres/100) + this.getSaldo());
+            this.ingresar((this.getSaldo() * this.tipoInteres / 100) + this.getSaldo());
             seHaRealizado = true;
         }
-            
+
         return seHaRealizado;
-    }  
+    }
 
     @Override
     public String imprimirDatos() {
-        return  super.imprimirDatos() + 
+        return super.imprimirDatos() +
                 "\nTipo de Interes: " + tipoInteres;
     }
 

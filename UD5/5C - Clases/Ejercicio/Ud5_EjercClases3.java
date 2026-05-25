@@ -1,3 +1,4 @@
+
 /** Construye un nuevo proyecto Java denominado Ud5_EjercClases3. En el proyecto debe aparecer
 un paquete, que no puede ser el paquete por defecto, ponle el nombre que creas oportuno. Dentro de
 dicho paquete:
@@ -49,7 +50,7 @@ import fechas.Fecha;
 
 public class Ud5_EjercClases3 {
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         System.out.println("Hello word");
     }

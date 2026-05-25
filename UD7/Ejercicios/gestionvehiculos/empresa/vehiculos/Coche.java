@@ -7,14 +7,14 @@ public class Coche extends Vehiculo implements Conducible {
 
     private double consumo;
 
-    public Coche (String matricula, int kmTotales, GregorianCalendar fechaRegistro, double consumo) {
+    public Coche(String matricula, int kmTotales, GregorianCalendar fechaRegistro, double consumo) {
         super(matricula, kmTotales, fechaRegistro);
         this.consumo = consumo;
     }
 
     @Override
-    public double calcularCoste () {
-        return kmTotales * (consumo/100);
+    public double calcularCoste() {
+        return kmTotales * (consumo / 100);
     }
 
     @Override

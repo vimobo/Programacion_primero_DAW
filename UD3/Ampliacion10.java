@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Ampliacion10 {
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         String cadenaTexto = " ";
@@ -13,38 +13,30 @@ public class Ampliacion10 {
         char ultimaLetra = ' ';
         boolean repetirBucle = false;
 
-        do
-        {
+        do {
 
-            try
-            {
+            try {
                 System.out.println("Introduce una palabra");
                 cadenaTexto = sc.nextLine();
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 System.out.println("Introduce una cadena de texto válida");
                 repetirBucle = false;
             }
-        }
-        while (repetirBucle);
+        } while (repetirBucle);
 
         cadenaLength = cadenaTexto.length();
 
         System.out.println("");
-        for (i = 0 ; i < cadenaLength ; i++) 
-        {
+        for (i = 0; i < cadenaLength; i++) {
 
-            if (i == 0 || ultimaLetra == ' ')
-            {
-              letra = cadenaTexto.toUpperCase().charAt(i);
-              System.out.printf("%c",letra);
+            if (i == 0 || ultimaLetra == ' ') {
+                letra = cadenaTexto.toUpperCase().charAt(i);
+                System.out.printf("%c", letra);
             }
 
-            else
-            {
-            letra = cadenaTexto.toLowerCase().charAt(i);
-            System.out.printf("%c",letra);
+            else {
+                letra = cadenaTexto.toLowerCase().charAt(i);
+                System.out.printf("%c", letra);
             }
             ultimaLetra = letra;
         }

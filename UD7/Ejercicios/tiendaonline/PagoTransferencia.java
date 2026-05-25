@@ -1,16 +1,16 @@
-public class PagoTransferencia implements MetodoPago {  
+public class PagoTransferencia implements MetodoPago {
 
-    //att
+    // att
     protected int cuentaBancaria;
 
-    //constructor
+    // constructor
     public PagoTransferencia(int cuentaBancaria) {
         this.cuentaBancaria = cuentaBancaria;
     }
 
-    //metodos
+    // metodos
     @Override
-    public void pagar(double cantidad){
+    public void pagar(double cantidad) {
 
     }
 }

@@ -1,14 +1,14 @@
-public class Gato extends Animal{
-	//Atributos
-	
-	//Constructor
-	public Gato(String nombre){
+public class Gato extends Animal {
+	// Atributos
+
+	// Constructor
+	public Gato(String nombre) {
 		super(nombre);
 	}
-	
-	//Métodos
+
+	// Métodos
 	@Override
-	public void hacerSonido(){
+	public void hacerSonido() {
 		System.out.println("Miau-miau-miau");
 	}
 }

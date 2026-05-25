@@ -1,2 +1,3 @@
-public enum EstadoPedido {CREADO, PAGADO, ENVIADO, ENTREGADO}
-
+public enum EstadoPedido {
+    CREADO, PAGADO, ENVIADO, ENTREGADO
+}

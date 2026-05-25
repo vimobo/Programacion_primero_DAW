@@ -1,13 +1,13 @@
 public class Producto {
 
-    //atributos
+    // atributos
     private static int cuentaId;
     protected int id;
     protected String nombre;
     protected double precio;
     protected int stock;
-    
-    //constructor
+
+    // constructor
     public Producto(String nombre, double precio) {
         this.nombre = nombre;
         this.precio = precio;
@@ -16,9 +16,9 @@ public class Producto {
         cuentaId++;
     }
 
-    //metodos
-    public String toString(){
-        return  "---------------------" +
+    // metodos
+    public String toString() {
+        return "---------------------" +
                 "\nId:" + id +
                 "\nNombre: " + nombre +
                 "\nPrecio: " + precio + " €" +
@@ -30,10 +30,10 @@ public class Producto {
             stock += cantidad;
     }
 
-    public boolean reducirStock (int cantidad) {
+    public boolean reducirStock(int cantidad) {
         boolean hayStock = false;
 
-        if((stock - cantidad) >= 0) {
+        if ((stock - cantidad) >= 0) {
             stock -= cantidad;
             hayStock = true;
         }

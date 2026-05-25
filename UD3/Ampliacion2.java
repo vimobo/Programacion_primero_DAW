@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Ampliacion2 {
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
@@ -13,40 +13,31 @@ public class Ampliacion2 {
         String salida;
 
         do {
-            do
-            {
-                try{
+            do {
+                try {
                     System.out.println("Introduce a");
                     a = Double.parseDouble(sc.nextLine());
                     System.out.println("Introduce b");
                     b = Double.parseDouble(sc.nextLine());
                     control = true;
-                
-                }
-                catch (NumberFormatException e)
-                {
+
+                } catch (NumberFormatException e) {
                     System.out.println("Los datos introducidos son incorrectos");
-                }
-                catch (ArithmeticException e)
-                {
+                } catch (ArithmeticException e) {
                     System.out.println("No se puede dividir por cero");
-                }
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     System.out.println("Ha pasado una excepcion");
                 }
-                
-            }
-            while (!control);
+
+            } while (!control);
 
             x = -b / a;
             System.out.println(x);
 
             System.out.println("Introduce \"s\" para salir, si quieres volver a empezar pulsa enter");
             salida = sc.nextLine();
-             
-        }
-        while (!salida.equals("s"));
+
+        } while (!salida.equals("s"));
 
     }
 }

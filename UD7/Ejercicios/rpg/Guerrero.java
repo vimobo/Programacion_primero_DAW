@@ -1,19 +1,18 @@
-public class Guerrero  extends Personaje implements Atacante{
-    
+public class Guerrero extends Personaje implements Atacante {
+
     public Guerrero(String nombre, int puntosVida, int puntosMagia) {
-        super(nombre,puntosVida,puntosMagia);
+        super(nombre, puntosVida, puntosMagia);
     }
 
     @Override
     public boolean atacar(Personaje objetivo) throws PersonajeException {
         boolean realizado = false;
 
-        if(objetivo.puntosVida - 20 >= 0){
+        if (objetivo.puntosVida - 20 >= 0) {
 
             objetivo.puntosVida = puntosVida - 20;
             realizado = true;
-        }
-        else{
+        } else {
             throw new PersonajeException(this.nombre + " ha matado a " + objetivo.nombre);
         }
         return realizado;

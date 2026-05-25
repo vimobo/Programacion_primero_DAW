@@ -1,6 +1,6 @@
 public class Excavadora extends Maquinaria {
 
-    //att
+    // att
     private int mDePala;
 
     public Excavadora(String nombre, int caballos, int mDePala) {

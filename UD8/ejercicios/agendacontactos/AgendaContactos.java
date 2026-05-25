@@ -1,7 +1,7 @@
 import java.util.TreeSet;
 
 public class AgendaContactos {
-    public static void main (String[]args){
+    public static void main(String[] args) {
 
         TreeSet<Contacto> coleccionOrdenada = new TreeSet<>();
 
@@ -15,8 +15,8 @@ public class AgendaContactos {
         coleccionOrdenada.add(c3);
         coleccionOrdenada.add(c4);
 
-        for(Contacto c: coleccionOrdenada) {
+        for (Contacto c : coleccionOrdenada) {
             System.out.println(c);
-        } 
+        }
     }
 }

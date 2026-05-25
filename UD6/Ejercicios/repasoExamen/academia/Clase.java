@@ -28,6 +28,7 @@ Métodos a Implementar (Lógica)
         Qué hace: Pide un nombre al usuario, recorre el array y utiliza .equals() para comparar el nombre buscado con el getNombre() de cada objeto. Si lo encuentra, muestra sus datos. */
 
 package academia;
+
 import java.util.Arrays;
 
 public class Clase {
@@ -37,32 +38,30 @@ public class Clase {
     private int contadorAlumnos = 0;
     private String nombreAula;
 
-
-    public Clase (String nombreAula) {
+    public Clase(String nombreAula) {
         this.nombreAula = nombreAula;
         arrayAlumnos = new Alumno[NALUM];
     }
 
     public void llenarAlumnos(Alumno alumno) {
-        
+
         if (contadorAlumnos < 3) {
 
             arrayAlumnos[contadorAlumnos] = alumno;
             contadorAlumnos++;
         }
-        
-        
+
     }
 
-    public void burbuja (){
+    public void burbuja() {
         Alumno aux;
-        for(int i = 0; i < NALUM; i++){
-            for(int j = 0; j < NALUM -1 -i; j++){
-                if (arrayAlumnos[j] != null && arrayAlumnos[j+1] != null){
-                    if(this.arrayAlumnos[j].getNombre().compareTo(arrayAlumnos[j+1].getNombre()) == 1){
+        for (int i = 0; i < NALUM; i++) {
+            for (int j = 0; j < NALUM - 1 - i; j++) {
+                if (arrayAlumnos[j] != null && arrayAlumnos[j + 1] != null) {
+                    if (this.arrayAlumnos[j].getNombre().compareTo(arrayAlumnos[j + 1].getNombre()) == 1) {
                         aux = arrayAlumnos[j];
-                        arrayAlumnos[j] = arrayAlumnos[j+1];
-                        arrayAlumnos[j+1] = aux;
+                        arrayAlumnos[j] = arrayAlumnos[j + 1];
+                        arrayAlumnos[j + 1] = aux;
                     }
                 }
             }
@@ -71,34 +70,28 @@ public class Clase {
 
     public String imprimirArrayAlumnos() {
         String cadena = "";
-        for(int i = 0; i < contadorAlumnos; i++) {
+        for (int i = 0; i < contadorAlumnos; i++) {
             cadena += arrayAlumnos[i].toString();
         }
         return cadena;
     }
 
-
-
     public void quitarAlumno(int id) {
 
-        
-        for(int i = id; i < NALUM -1; i++) {
-            arrayAlumnos[i] = arrayAlumnos[i+1];
+        for (int i = id; i < NALUM - 1; i++) {
+            arrayAlumnos[i] = arrayAlumnos[i + 1];
         }
 
-                arrayAlumnos[NALUM-1] = null;
-            contadorAlumnos--;
-            
-            
-        }
-    
-       
-    public void ordenarArrayAlumnos () {
+        arrayAlumnos[NALUM - 1] = null;
+        contadorAlumnos--;
+
+    }
+
+    public void ordenarArrayAlumnos() {
         Arrays.sort(arrayAlumnos);
     }
 
-    
-    public static void main (String[]args) {
+    public static void main(String[] args) {
         Alumno a1 = new Alumno("aikel", 2.3, 5.6, 7.8);
         Alumno a2 = new Alumno("coni", 2.3, 2.3);
         Alumno a3 = new Alumno("boni", 2.3, 2.3);
@@ -109,16 +102,16 @@ public class Clase {
         c1.llenarAlumnos(a1);
         c1.llenarAlumnos(a2);
         c1.llenarAlumnos(a3);
-        //System.out.println(c1.imprimirArrayAlumnos());
-        //c1.llenarAlumnos(a4);
-        
+        // System.out.println(c1.imprimirArrayAlumnos());
+        // c1.llenarAlumnos(a4);
+
         c1.quitarAlumno(1);
         System.out.println(c1.imprimirArrayAlumnos());
-        //a1.setArrayNotas(9.9);
+        // a1.setArrayNotas(9.9);
         c1.burbuja();
         System.out.println(c1.imprimirArrayAlumnos());
 
-       // System.out.println(Arrays.toString(a1.getArrayNotas()));
+        // System.out.println(Arrays.toString(a1.getArrayNotas()));
 
     }
 

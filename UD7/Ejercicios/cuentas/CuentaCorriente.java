@@ -1,13 +1,13 @@
 public class CuentaCorriente extends Cuenta {
 
-    //att
+    // att
     private double importePorTransaccion;
     private int numTransacciones;
     private int numTransaccionesExentas;
     private boolean primeraGratis = true;
-    
-    //consturctores
-    public CuentaCorriente () {
+
+    // consturctores
+    public CuentaCorriente() {
         this.setCuotaMantenimiento(-1);
     }
 
@@ -19,7 +19,7 @@ public class CuentaCorriente extends Cuenta {
         numTransaccionesExentas = 0;
     }
 
-    //getters y setters
+    // getters y setters
     public double getImportePorTransaccion() {
         return importePorTransaccion;
     }
@@ -40,53 +40,51 @@ public class CuentaCorriente extends Cuenta {
         this.numTransaccionesExentas = numTransaccionesExentas;
     }
 
-
-    //aplicamos comisiones tenieno en cuenta las trasacciones exentas y el importe por transaccion
+    // aplicamos comisiones tenieno en cuenta las trasacciones exentas y el importe
+    // por transaccion
     @Override
     public boolean aplicarComisiones() {
         boolean seHaRealizado = false;
-        
-        if (this.getCuotaMantenimiento() != -1){
+
+        if (this.getCuotaMantenimiento() != -1) {
             this.retirar(this.getCuotaMantenimiento());
             seHaRealizado = true;
         }
 
-        if(!primeraGratis && this.importePorTransaccion != -1) {
+        if (!primeraGratis && this.importePorTransaccion != -1) {
             this.retirar((this.getNumTransaccionesExentas() * this.importePorTransaccion));
 
             seHaRealizado = true;
         }
-            
 
-        if(primeraGratis) {
+        if (primeraGratis) {
             primeraGratis = false;
         }
 
-        this.numTransaccionesExentas = 0;    
-            
+        this.numTransaccionesExentas = 0;
+
         return seHaRealizado;
-    } 
+    }
 
-
-    //Transferencias modigicadas para añadir el contador de transacciones
+    // Transferencias modigicadas para añadir el contador de transacciones
 
     public boolean transferir(double cantidad, Cuenta destino) {
         boolean seHaRealizado = false;
 
-        if(destino != null) {
-            this.setSaldo(this.getSaldo() - cantidad); 
+        if (destino != null) {
+            this.setSaldo(this.getSaldo() - cantidad);
             destino.setSaldo(destino.getSaldo() + cantidad);
             seHaRealizado = true;
             numTransacciones++;
             numTransaccionesExentas++;
         }
-        
+
         return seHaRealizado;
     }
 
     @Override
     public String imprimirDatos() {
-        return  super.imprimirDatos() + 
+        return super.imprimirDatos() +
                 "\nImporte por Transaccion: " + importePorTransaccion +
                 "\nNum Transacciones: " + numTransacciones +
                 "\nNum Tranacciones Exentas: " + numTransaccionesExentas;

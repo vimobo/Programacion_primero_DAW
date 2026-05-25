@@ -6,8 +6,7 @@ import empresa.vehiculos.*;
 import java.util.Scanner;
 
 public class Main {
-    public static void main (String[]args) {
-
+    public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int opcion = 0;
@@ -18,28 +17,27 @@ public class Main {
         do {
             fecha = "1000/10/10";
             // sc.nextLine();
-            if(!fecha.matches(regEx))
+            if (!fecha.matches(regEx))
                 System.out.println("Introduce formato correcto");
-        }while(!fecha.matches(regEx));
+        } while (!fecha.matches(regEx));
 
-        GregorianCalendar fechaFormateada = new GregorianCalendar(Integer.parseInt(fecha.substring(0,4)), Integer.parseInt(fecha.substring(5,7)) - 1, Integer.parseInt(fecha.substring(8,10)));
+        GregorianCalendar fechaFormateada = new GregorianCalendar(Integer.parseInt(fecha.substring(0, 4)),
+                Integer.parseInt(fecha.substring(5, 7)) - 1, Integer.parseInt(fecha.substring(8, 10)));
 
-        try{
-            Vehiculo [] array = new Vehiculo[3];
+        try {
+            Vehiculo[] array = new Vehiculo[3];
 
             Camion cm = new Camion("KPMM123", 200, fechaFormateada, 20);
             Coche co = new Coche("KSJ1234", -20, fechaFormateada, 20);
             array[0] = cm;
             array[1] = co;
 
-            
             co.conducir(20);
             System.out.println(cm);
 
-            ((Coche)array[1]).conducir(10);
-        }
-        catch (Exception e) {
+            ((Coche) array[1]).conducir(10);
+        } catch (Exception e) {
             System.out.println(e);
         }
-    }   
+    }
 }

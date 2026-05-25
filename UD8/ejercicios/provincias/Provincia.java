@@ -1,5 +1,5 @@
 
-public class Provincia implements Comparable<Provincia>{
+public class Provincia implements Comparable<Provincia> {
 
     private String codProvincia;
     private String provincia;
@@ -14,11 +14,9 @@ public class Provincia implements Comparable<Provincia>{
 
     public boolean equals(Provincia provincia) {
         boolean resultado = false;
-        if(
-            this.getCodProvincia() == provincia.getCodProvincia() &&
-            this.getProvincia().equals(provincia.getProvincia()) &&
-            this.getIdProvincia() == provincia.getIdProvincia()
-        )
+        if (this.getCodProvincia() == provincia.getCodProvincia() &&
+                this.getProvincia().equals(provincia.getProvincia()) &&
+                this.getIdProvincia() == provincia.getIdProvincia())
             resultado = true;
 
         return resultado;
@@ -27,10 +25,10 @@ public class Provincia implements Comparable<Provincia>{
     @Override
     public String toString() {
         return "{" +
-            " codProvincia='" + getCodProvincia() + "'" +
-            ", provincia='" + getProvincia() + "'" +
-            ", idProvincia='" + getIdProvincia() + "'" +
-            "}\n";
+                " codProvincia='" + getCodProvincia() + "'" +
+                ", provincia='" + getProvincia() + "'" +
+                ", idProvincia='" + getIdProvincia() + "'" +
+                "}\n";
     }
 
     @Override
@@ -47,7 +45,6 @@ public class Provincia implements Comparable<Provincia>{
         this.provincia = provincia;
         this.idProvincia = idProvincia;
     }
-
 
     public String getCodProvincia() {
         return this.codProvincia;
@@ -72,6 +69,5 @@ public class Provincia implements Comparable<Provincia>{
     public void setIdProvincia(int idProvincia) {
         this.idProvincia = idProvincia;
     }
-    
 
 }

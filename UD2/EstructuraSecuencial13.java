@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class EstructuraSecuencial13{
+public class EstructuraSecuencial13 {
 
 	public static void main (String[]args){
 	

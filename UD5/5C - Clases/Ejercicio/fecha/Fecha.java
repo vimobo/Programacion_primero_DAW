@@ -43,20 +43,19 @@ paquete que la clase Fecha. Dentro de dicha clase:
 
 package fecha;
 
-
 public class Fecha {
-    
+
     private int dia = 0;
     private EnumMes mes;
     private int anio = 0;
 
-    public Fecha (EnumMes mes) {
+    public Fecha(EnumMes mes) {
         setMes(mes);
         dia = 0;
         anio = 0;
     }
 
-    public Fecha (int dia, EnumMes mes, int anio){
+    public Fecha(int dia, EnumMes mes, int anio) {
 
         setDia(dia);
         setMes(mes);
@@ -65,42 +64,42 @@ public class Fecha {
 
     public void setMes(EnumMes mes) {
         this.mes = mes;
-    } 
+    }
 
     public void setDia(int dia) {
         this.dia = dia;
-    } 
-    
+    }
+
     public void setAnio(int anio) {
         this.anio = anio;
-    } 
-    
-    public int getDia () {
+    }
+
+    public int getDia() {
         return dia;
     }
 
-    public EnumMes getMes () {
+    public EnumMes getMes() {
         return mes;
     }
 
-    public int getAnio () {
+    public int getAnio() {
         return anio;
     }
 
-    public boolean esVerano () {
+    public boolean esVerano() {
         boolean esVerano = false;
-        if (mes == EnumMes.Agosto || mes == EnumMes.Julio || mes == EnumMes.Junio) 
+        if (mes == EnumMes.Agosto || mes == EnumMes.Julio || mes == EnumMes.Junio)
             esVerano = true;
         return esVerano;
     }
 
-    public int diferenciaEnAnios(Fecha fechaActual){
+    public int diferenciaEnAnios(Fecha fechaActual) {
         int diferenciaAnios = 0;
         diferenciaAnios = fechaActual.anio - this.anio;
         return diferenciaAnios;
     }
 
-    public String toString (){
+    public String toString() {
         return dia + " de " + mes + " de " + anio;
     }
 

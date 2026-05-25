@@ -1,18 +1,18 @@
 public class Publicacion {
 
-    //att
+    // att
     protected int isbn;
     protected String titulo;
     protected int anioPublicacion;
 
-    //Constructor
-    public Publicacion(int isbn ,String titulo, int anioPublicacion) {
+    // Constructor
+    public Publicacion(int isbn, String titulo, int anioPublicacion) {
         this.isbn = isbn;
         this.titulo = titulo;
         this.anioPublicacion = anioPublicacion;
     }
 
-    public int getIsbn(){
+    public int getIsbn() {
         return isbn;
     }
 
@@ -20,7 +20,7 @@ public class Publicacion {
         return titulo;
     }
 
-    public int getAnio () {
+    public int getAnio() {
         return anioPublicacion;
     }
 

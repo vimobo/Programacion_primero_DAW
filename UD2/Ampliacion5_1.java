@@ -1,8 +1,8 @@
 public class Ampliacion5_1 {
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
-        //declaración de variables
+        // declaración de variables
         char a = 'H';
         char b = 'O';
         char c = 'L';
@@ -10,17 +10,12 @@ public class Ampliacion5_1 {
         char e = 'S';
         String abcde;
 
-        //concatenación con clase string builder
+        // concatenación con clase string builder
 
-        abcde= ""+a+b+c+d+e;
+        abcde = "" + a + b + c + d + e;
 
         System.out.println("La concatenacion es: " + abcde);
-       
-     
-
-
 
     }
-
 
 }

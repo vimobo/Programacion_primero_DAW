@@ -17,7 +17,7 @@ public class Inventario {
         int stock = (this.inventario.get(key)).getStock();
         if (this.inventario.containsKey(key)) {
             if (stock + stockASumar >= 0) {
-                this.inventario.get(key).setStock(stock + stockASumar); 
+                this.inventario.get(key).setStock(stock + stockASumar);
             }
         }
     }
@@ -28,7 +28,7 @@ public class Inventario {
 
     public void mostrarInventario() {
 
-        for (Map.Entry<String, Dispositivo> entry: this.inventario.entrySet()) {
+        for (Map.Entry<String, Dispositivo> entry : this.inventario.entrySet()) {
             System.out.println("***************");
             System.out.println(entry.getKey());
             System.out.println(entry.getValue());
@@ -61,11 +61,10 @@ public class Inventario {
                 100,
                 "INTEL CORE 7",
                 "8GB",
-            "1TB",
-        "MSI_MOTHERBORD"));
+                "1TB",
+                "MSI_MOTHERBORD"));
 
         inv.mostrarInventario();
-        
 
         inv.eliminarDispositivo("A22");
         inv.eliminarDispositivo("A22");

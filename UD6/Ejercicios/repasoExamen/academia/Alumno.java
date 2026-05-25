@@ -18,8 +18,8 @@ Esta clase representa la unidad básica. Se espera que tenga un estado interno p
 
         Método toString(): Sobrescribir este método para definir cómo se debe imprimir el alumno cuando lo mostremos en una lista. */
 
-
 package academia;
+
 import java.util.Arrays;
 
 public class Alumno implements Comparable<Alumno> {
@@ -36,19 +36,19 @@ public class Alumno implements Comparable<Alumno> {
 
     }
 
-    public String getNombre(){
+    public String getNombre() {
         return nombre;
     }
 
-    public Alumno () {
+    public Alumno() {
         id = contador;
         contador++;
         nombre = "";
         arrayNotas = new double[TRIMESTRES];
     }
 
-    //constructor con id autoprogresivo
-    public Alumno (String nombre, double nota1, double nota2, double nota3) {
+    // constructor con id autoprogresivo
+    public Alumno(String nombre, double nota1, double nota2, double nota3) {
 
         id = contador;
         contador++;
@@ -61,7 +61,7 @@ public class Alumno implements Comparable<Alumno> {
         this.arrayNotas[2] = nota3;
     }
 
-    public Alumno (String nombre, double nota1, double nota2) {
+    public Alumno(String nombre, double nota1, double nota2) {
 
         id = contador;
         contador++;
@@ -74,7 +74,7 @@ public class Alumno implements Comparable<Alumno> {
         this.arrayNotas[2] = -1.0;
     }
 
-    public Alumno (String nombre, double nota1) {
+    public Alumno(String nombre, double nota1) {
 
         id = contador;
         contador++;
@@ -89,14 +89,13 @@ public class Alumno implements Comparable<Alumno> {
 
     public String toString() {
         return "\nid: " + id +
-        "\nAlumno: " + nombre + "\nnotas:  " + 
-        Arrays.toString(arrayNotas) + "\n*****************************";
+                "\nAlumno: " + nombre + "\nnotas:  " +
+                Arrays.toString(arrayNotas) + "\n*****************************";
     }
 
-    public double[] getArrayNotas () {
+    public double[] getArrayNotas() {
         return this.arrayNotas;
     }
-
 
     public void setArrayNotas(double nota1) {
         this.arrayNotas[0] = nota1;
@@ -107,7 +106,7 @@ public class Alumno implements Comparable<Alumno> {
         this.arrayNotas[1] = nota2;
     }
 
-    public int getId(){
+    public int getId() {
         return id;
     }
 
@@ -120,16 +119,15 @@ public class Alumno implements Comparable<Alumno> {
     public double getNotaMedia() {
         double notaMedia = 0.0;
         int contador = 0;
-        for(int i = 0; i < arrayNotas.length; i++) {
-            if(arrayNotas[i] != -1.0) {
+        for (int i = 0; i < arrayNotas.length; i++) {
+            if (arrayNotas[i] != -1.0) {
                 notaMedia += arrayNotas[i];
                 contador++;
             }
         }
-        if (contador > 0) 
-            notaMedia /= contador; 
+        if (contador > 0)
+            notaMedia /= contador;
         return notaMedia;
     }
 
-    
 }

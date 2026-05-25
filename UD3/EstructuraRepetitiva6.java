@@ -2,9 +2,9 @@ import java.util.Scanner;
 
 public class EstructuraRepetitiva6 {
 
-    public static void main (String[]args) {
+    public static void main(String[] args) {
 
-        //declaramos  variables, ojb scanner y pedimos al usuario
+        // declaramos variables, ojb scanner y pedimos al usuario
         Scanner sc = new Scanner(System.in);
         int numero, numero1;
 
@@ -18,9 +18,8 @@ public class EstructuraRepetitiva6 {
         if (numero % 2 == 1)
             numero += 1;
 
-        //bucle while para imprimir
-        while (numero <= numero1)
-        {
+        // bucle while para imprimir
+        while (numero <= numero1) {
             System.out.println(numero);
             numero += 2;
         }
