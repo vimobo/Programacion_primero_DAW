@@ -5,6 +5,8 @@ Incluye ejercicios de las diferentes unidades del módulo, problemas de lógica 
 Este repositorio recoge parte de mi proceso de aprendizaje y evolución en programación y sirve como muestra práctica de los conocimientos adquiridos durante mi formación como desarrollador.
 
 
+__________________________________________________________________________________________________________________________________________________________________
+
 
 Repository containing exercises, assignments and projects developed during the first year of the Web Application Development (DAW) program, mainly focused on Java programming.
 
